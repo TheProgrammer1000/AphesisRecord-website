@@ -29,10 +29,6 @@ body {
   color: whitesmoke;
 }
 
-.navbar {
-  z-index: 1;
-}
-
 #a-text-1 {
   color: white;
   font-size: 2rem;
@@ -74,6 +70,7 @@ body {
   /* align-items: center; */
   justify-content: center;
   position: relative;
+  height: 100%;
   /* background-color: red; */
 }
 
