@@ -60,6 +60,7 @@ body {
   display: flex;
   position: absolute;
   right: 6vw;
+  padding-top: 2%;
   /* background-color: #ffffff; */
 }
 
@@ -70,13 +71,16 @@ body {
   /* align-items: center; */
   justify-content: center;
   position: relative;
-  height: 100%;
+  /* height: 100%; */
+  /* width: 100%; */
   /* background-color: red; */
 }
 
 .menu-burger {
-  border: 2px solid rgb(255, 255, 255);
-  margin-bottom: 1vh;
+  /* border: 2px solid rgb(255, 255, 255); */
+  /* margin-top: 1vh; */
+  height: 100%;
+  border-top: 4px solid #fff;
 }
 
 #menu-ex {
@@ -728,18 +732,6 @@ body {
   display: none;
 }
 
-#contact-img {
-  /* width: 100%; */
-  /* max-height: 100%; */
-  /* overflow-y: hidden; */
-  /* height: 35vh; */
-  /* background-image: url(img/Tico-contact.png); */
-  /* background-position: center center; */
-  /* background-size: cover
-
-  ; */
-}
-
 #contact-img img {
   max-height: 100%;
   width: 100%;
@@ -896,6 +888,10 @@ body {
   }
 }
 @media screen and (min-width: 830px) {
+  #navbar-toggle {
+    height: 100%;
+  }
+
   #aphesis-header h6 {
     font-size: 4rem;
     font-weight: 600;
