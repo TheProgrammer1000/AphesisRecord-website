@@ -1,0 +1,1436 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&family=Roboto+Condensed:ital@1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400;1,700&display=swap');
+:root {
+  --backgroundBlack: #1c1b1b;
+  --borderGold: #b69255;
+  --textGoldColor: #b89050;
+  --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#nav-items {
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+html,
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.body-backgroundColor {
+  background-color: var(--borderGold);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: whitesmoke;
+}
+
+#a-text-1 {
+  color: white;
+  font-size: 2rem;
+}
+
+#a-text-2 {
+  color: white;
+  font-size: 2rem;
+}
+
+#a-text-3 {
+  color: white;
+  font-size: 2rem;
+}
+
+#navbar {
+  display: none;
+}
+
+#nav {
+  background-color: var(--backgroundBlack);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  transition: top 0.3s;
+}
+
+#menu {
+  display: flex;
+  position: absolute;
+  right: 6vw;
+  /* background-color: #ffffff; */
+}
+
+#navbar-toggle {
+  display: flex;
+  flex-direction: column;
+  background-image: none;
+  /* align-items: center; */
+  justify-content: center;
+  position: relative;
+  /* background-color: red; */
+}
+
+.menu-burger {
+  border: 2px solid rgb(255, 255, 255);
+  margin-bottom: 1vh;
+}
+
+#menu-ex {
+  position: absolute;
+  height: 30px; /* this can be anything */
+  width: 30px; /* ...but maintain 1:1 aspect ratio */
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#menu-ex::before,
+#menu-ex::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  background-color: white;
+}
+
+#menu-ex::before {
+  transform: rotate(45deg);
+}
+
+#menu-ex::after {
+  transform: rotate(-45deg);
+}
+
+#logo {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#img-logo {
+  height: 16vh;
+}
+
+#menu-container {
+  position: absolute;
+  right: 35px;
+  top: 40px;
+}
+
+/* Hero section*/
+#hero-section {
+  margin-top: 20vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'image1'
+    'image2';
+  grid-row-gap: 5vw;
+}
+
+.hero-image-1 {
+  grid-area: 'image1';
+}
+
+.hero-image-1 img {
+  object-fit: contain;
+  max-height: 100%;
+  width: 100%;
+}
+
+.hero-image-2 {
+  grid-area: 'image2';
+  background-image: linear-gradient(180deg, var(--textGoldColor), #4e3e22a3);
+  margin-bottom: 2vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr 0.3fr;
+  grid-template-areas:
+    'header'
+    'image'
+    'footer';
+}
+
+#aphesis-header {
+  grid-area: 'header';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  font-family: helvetica-w01-bold, helvetica-w02-bold, helvetica-lt-w10-bold,
+    sans-serif;
+  text-shadow: #c8c8c8 1px 1px 0px, #b4b4b4 0px 2px 0px, #a0a0a0 0px 3px 0px,
+    rgba(140, 140, 140, 0.498039) 0px 4px 0px, #787878 0px 0px 0px,
+    rgba(0, 0, 0, 0.498039) 0px 5px 10px;
+  text-align: center;
+  letter-spacing: 5px;
+  /* padding-bottom: 1vh; */
+}
+
+#aphesis-header h6 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+#dove-container {
+  /* object-fit: cover; */
+
+  grid-area: image;
+  /* background-image: url(img/dovelogo.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%; */
+}
+
+#dove-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* #dove-image {
+  object-fit: contain;
+  max-height: 100%;
+  width: 100%;
+  object-position: center;
+} */
+
+#record-title {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  grid-area: footer;
+}
+
+#record-title p {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+#section-3-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+  /* color: #b89050; */
+  color: #fff;
+  font-weight: lighter;
+  background-color: #000000;
+  line-height: 5vh;
+}
+
+#section-3-header h8 {
+  font-size: 2rem;
+}
+
+#header-text {
+  text-align: center;
+}
+
+#header-text h2 {
+  font-size: 2rem;
+  margin-bottom: 2vh;
+  /* font-style: serif; */
+  /* font-weight: bold; */
+}
+
+#header-text p {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.section-artist {
+  margin: 11%;
+  position: relative;
+}
+
+.section3-image {
+  border: 10px outset #000000;
+  width: 100%;
+  height: auto;
+}
+
+.artist-image {
+  height: 30vh;
+  width: 100%;
+}
+
+.section-artist-container {
+  background-image: url('img/TICOARTISTFINAL5.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 45vh;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  position: relative;
+  /* margin-bottom: 2vh; */
+  border-bottom: 1px solid var(--textGoldColor);
+  /* margin-bottom: 1vh; */
+
+  /* background-image: url('img/tico-first-page320px.png'); */
+}
+
+.artist-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--borderGold);
+  /* position: relative; */
+  /* margin-top: 2vh; */
+}
+
+.artist-image-wrapper img {
+  object-fit: cover;
+  object-position: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.artist-text-description {
+  position: absolute;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #32323269;
+  background-image: linear-gradient(180deg, #32323271, #36270b5e);
+  height: 21vh;
+  width: 72vw;
+  color: var(--textGoldColor);
+  border: 1px solid #a48349;
+}
+
+.artist-text-description p {
+  padding-bottom: 0.5vh;
+  margin-bottom: 0;
+  font-style: normal;
+}
+
+.artist-text-description h5 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  overflow-y: hidden;
+  padding-top: 1vh;
+  /* animation-timing-function: ease-in-out; */
+}
+
+/* Animation */
+@keyframes header-animation-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes picture-card-animation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes contact-animation {
+  from {
+    opacity: 0;
+    /* padding-bottom: 100%; */
+    transform: translateY(100%);
+    /* transform: rotate3d(125deg); */
+
+    display: none;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+    display: none;
+    /* transform: matrix3d(0%); */
+    /* padding-bottom: 0%; */
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .artist-text-animation {
+    /* animation-iteration-count: ; */
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-name: header-animation-text;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .picture-animation {
+    /* animation-iteration-count: ; */
+    animation-duration: 1.3s;
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: ease-in-out;
+    animation-name: picture-card-animation;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .contact-animation {
+    /* animation-iteration-count: ; */
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: ease-in-out;
+    animation-name: contact-animation;
+  }
+}
+
+/* ------------------------------------------------------------- */
+
+.section-artist-container img {
+  width: 100%;
+  height: 100%;
+  /* height: 50vh; */
+  /* display: flex; */
+  /* background-color: red; */
+  /* background-image: url('img/tico-first-page320px.png'); */
+}
+
+.card {
+  height: 20vh;
+  background-color: #000000e1;
+  /* border: 4px solid #be9b59;  */
+  border-radius: 2px;
+}
+
+.card-header {
+  line-height: 150%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--textGoldColor);
+  padding-top: 2vh;
+  font-size: 1.4rem;
+}
+
+.card-header {
+  font-size: 2rem;
+  font-style: italic;
+}
+
+#section-collaboration-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: #b89050;
+  height: 40vh;
+  text-align: center;
+}
+
+#collaboration-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow-y: hidden;
+  position: relative;
+  border-bottom: 2px solid var(--borderGold);
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+#collaboration-header h2 {
+  margin-top: 1vh;
+  font-size: 2 rem;
+  font-weight: normal;
+  overflow-y: hidden;
+}
+
+#collaboration-header h3 {
+  font-size: 1.1rem;
+  /* border-bottom: 2px solid #e2b669; */
+  padding-bottom: 5px;
+  /* font-style: italic; */
+}
+
+#section-collaboration-header {
+  font-size: 1rem;
+  background-color: #29251f;
+  /* background-image: linear-gradient(#ba860e, rgba(0, 0, 0, 0.8)); */
+  /* background-repeat: no-repeat; */
+  /* background-position: center center; */
+}
+
+#collaboration-paragraph {
+  color: white;
+  text-align: center;
+  line-height: 3.8vh;
+  padding-left: 1vh;
+  padding-right: 1vh;
+  margin-bottom: 1vh;
+}
+
+#collaboration-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(img/aphesis1770px.png);
+
+  background-color: #000000;
+  background-size: cover;
+  background-position: center center;
+  /* margin: 5%; */
+}
+
+.collab-header {
+  text-align: center;
+  color: #e3e3e3ef;
+  border: 2px solid var(--textGoldColor);
+}
+
+.collab-header h2 {
+  font-size: 2rem;
+}
+
+.collab-card-container {
+  position: relative;
+  display: flex;
+  width: auto;
+  /* background-color: #404040a6; */
+  /* border-top: 3px solid var(--borderGold); */
+  /* margin: 20px; */
+}
+
+.coll-img {
+  width: 100vw;
+}
+
+.artist-info-text {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  /* align-items: center; */
+  bottom: 17.5vh;
+
+  right: 23px;
+  /* height: 10vh; */
+  /* width: 47vw; */
+  background-color: #323232bd;
+  color: white;
+  z-index: 1;
+  /* text-align: center; */
+  padding: 5px;
+  /* overflow-y: hidden; */
+}
+
+.artist-info-text p {
+  margin-bottom: 0;
+}
+
+.artist-info-text h3 {
+  overflow-y: hidden;
+  font-weight: normal;
+  font-size: 1.5rem;
+  color: var(--textGoldColor);
+}
+
+#thaison-img {
+  width: 100%;
+  height: 35vh;
+}
+
+#contain {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+#contain h2 {
+  margin-bottom: 2vh;
+  font-size: 3rem;
+  font-weight: normal;
+  overflow-y: hidden;
+}
+
+#contain h3 {
+  font-size: 2rem;
+  font-weight: normal;
+  overflow-y: hidden;
+}
+
+#contain p {
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+#email-container p {
+  margin-bottom: 3vh;
+  margin-top: 2vh;
+}
+
+#collaboration-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.collaboration-card {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  /* height: 40vh; */
+  /* background-color: red; */
+  border: 6px outset white;
+  padding: 1%;
+
+  margin: 5%;
+}
+
+.card-img-container {
+  /* height: 32vh; */
+  /* width: 85vw; */
+  background-color: green;
+}
+
+.card-img-container img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.card-text-container {
+  /* height: 19vh; */
+  /* width: 84vw; */
+  font-size: 1.5rem;
+  color: white;
+  /* background-color: pink; */
+}
+
+.collaboration-etiket {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  /* align-items: center; */
+  bottom: 21vh;
+  /* top: 2vh; */
+
+  /* left: 200px; */
+  right: 0;
+  /*top:50%*/ /*bottom:50%*/ /*top:0*/ /*bottom:0*/ /*bottom:10vh*/ /*height:10vh*/ /*width:47vw*/
+  background-color: #32323286;
+  color: white;
+  z-index: 1;
+  /* text-align: center; */
+  /* padding-bottom: 100px; */
+  /* overflow-y: hidden; */
+}
+
+.collaboration-etiket p {
+  margin-bottom: 0;
+}
+
+.collaboration-etiket h6 {
+  overflow-y: hidden;
+  /* font-weight: normal; */
+  font-size: 1.8rem;
+  color: var(--textGoldColor);
+}
+
+.fa-2x {
+  font-size: 2rem;
+}
+
+.collab-social {
+  margin-top: 1vh;
+  /* display: flex; */
+  /* margin-left: 4vw; */
+  /* color: white; */
+  /* margin-bottom: 1vh; */
+}
+
+#contact {
+  background-color: var(--textGoldColor);
+  color: white;
+}
+
+#contact-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 35vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-container h2 {
+  font-size: 3rem;
+  margin-bottom: 2vh;
+  font-weight: normal;
+}
+
+.artist {
+  display: flex;
+  color: var(--borderGold);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.artist-1 {
+  padding-top: 4vh;
+  font-size: 2rem;
+}
+
+.artist-2 {
+  font-size: 2rem;
+  padding-bottom: 4vh;
+}
+
+#contact-container h3 {
+  font-size: 2rem;
+  font-weight: lighter;
+  font-weight: normal;
+}
+
+#contact-container p {
+  font-size: 1rem;
+}
+
+#artist-header {
+  display: none;
+}
+
+#tico-img {
+  display: none;
+}
+
+#contact-img {
+  /* width: 100%; */
+  /* max-height: 100%; */
+  /* overflow-y: hidden; */
+  /* height: 35vh; */
+  /* background-image: url(img/Tico-contact.png); */
+  /* background-position: center center; */
+  /* background-size: cover
+
+  ; */
+}
+
+#contact-img img {
+  max-height: 100%;
+  width: 100%;
+}
+
+.contact-text {
+  margin-top: 2vh;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-animation-element {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contact-text h2 {
+  font-size: 3rem;
+  overflow: hidden;
+}
+
+.contact-text h3 {
+  overflow: hidden;
+}
+
+#footer {
+  background-color: #b89050;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh;
+  height: 32vh;
+}
+
+#footer-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#footer-container img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+#footer p {
+  color: white;
+}
+
+#footer-text {
+  overflow: hidden;
+}
+
+#footer-text p {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 399px) {
+  #aphesis-header h6 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  #record-title p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
+
+/* Responsive Design */
+@media screen and (min-width: 630px) {
+  #aphesis-header h6 {
+    font-size: 3.4rem;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  #record-title p {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .artist-info-text {
+    bottom: 23.5vh;
+    right: 1vw;
+    font-size: 1.5rem;
+  }
+  .artist-info-text h3 {
+    font-size: 2rem;
+  }
+
+  .collaboration-etiket p {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+  }
+
+  .collaboration-etiket h6 {
+    /* overflow-y: hidden; */
+    /* font-weight: normal; */
+    font-size: 2.6rem;
+    color: var(--textGoldColor);
+  }
+
+  .card-text-container {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  .collaboration-etiket {
+    bottom: 23vh;
+  }
+
+  .fa-2x {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .artist-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    /* height: 50vh; */
+    /* border: 1px outset var(--borderGold); */
+    /* position: relative; */
+    /* margin-top: 2vh; */
+    /* border-bottom: 10px solid var(--textGoldColor); */
+  }
+
+  .artist-image-wrapper img {
+    object-fit: cover;
+    max-height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  #artist-image-container {
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, 1fr); */
+  }
+
+  .artist-text-description {
+    height: 21vh;
+    width: 50vw;
+  }
+}
+@media screen and (min-width: 830px) {
+  #aphesis-header h6 {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  #record-title p {
+    font-size: 2rem;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .artist-info-text {
+    font-size: 2rem;
+  }
+
+  .artist-info-text h3 {
+    font-size: 2.5rem;
+  }
+
+  .contact-text h2 {
+    font-size: 5rem;
+    overflow: hidden;
+  }
+
+  .contact-text h3 {
+    font-size: 2.5rem;
+    overflow: hidden;
+    /* line-height: 1; */
+  }
+
+  .contact-text {
+    font-size: 1.6rem;
+    font-weight: 200;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .body-backgroundColor {
+    background-color: var(--textGoldColor);
+  }
+
+  #nav {
+    display: none;
+  }
+
+  #navbar {
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    height: 25vh;
+  }
+
+  #aphesis-img {
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+  }
+
+  #aphesis-header h3 {
+    font-size: 4rem;
+  }
+
+  #hero-section {
+    /* display: none; */
+    /* margin-top: 4vh; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 0;
+    margin-top: 8vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    grid-gap: 2vw;
+  }
+
+  .hero-image-1 {
+    /* height: 70vh; */
+    width: 100%;
+  }
+
+  .hero-image-2 {
+    /* height: 70vh; */
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .nav-items {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .nav-item {
+    width: 40%;
+    height: 20%;
+  }
+
+  #nav-item-right {
+    right: 0;
+  }
+
+  #hero-2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .hero-image-2 {
+    grid-template-rows: none;
+    grid-template:
+      'header'
+      'image'
+      'footer';
+  }
+
+  #hero-image-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  #aphesis-header h6 {
+    font-size: 2.4rem;
+  }
+
+  #record-title p {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  #section2 {
+    width: 60vw;
+    height: 80vh;
+  }
+
+  .artist-info-text {
+    position: absolute;
+    /* background-color: #a4834900; */
+    /* margin-bottom: 1.5vh; */
+    font-size: 1.5rem;
+  }
+
+  .artist-info-text h3 {
+    color: var(--textGoldColor);
+    font-size: 2rem;
+  }
+
+  #header-text h8 {
+    font-size: 2.8rem;
+    font-weight: 400;
+    /* font-style: italic; */
+  }
+
+  #header-text p {
+    font-size: 1.2rem;
+    /* font-weight: 400; */
+    /* font-style: italic; */
+  }
+
+  #artist-header h3 {
+    padding: 10px;
+  }
+
+  .artist-text-description {
+    border: 1px solid var(--textGoldColor);
+    height: 21vh;
+    width: 33%;
+  }
+
+  #section-3-header {
+    margin-top: 10vh;
+    height: 25vh;
+  }
+
+  #signed-artists {
+    background-color: var(--borderGold);
+  }
+
+  #section-collaboration-text {
+    margin-top: 4vh;
+    background-color: #000000;
+  }
+
+  #section-collaboration-header {
+    grid-area: header;
+    /* grid-row: -1; */
+    /* grid-column: -1; */
+  }
+
+  #collaboration-container {
+    background-position: center center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    grid-template-areas: 'header header';
+    /* grid-template-rows: 1fr 1fr; */
+  }
+
+  .collaboration-card {
+    display: flex;
+    flex-direction: row;
+    margin: 5%;
+    /* grid-column: -1; */
+    /* grid-row: -1; */
+  }
+
+  .card-img-container {
+    width: 85vw;
+  }
+
+  .card-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    font-size: 1rem;
+    width: 50vw;
+  }
+
+  .collaboration-etiket h6 {
+    font-size: 1rem;
+  }
+
+  .collaboration-etiket {
+    right: 1vw;
+    /* left: 10vw; */
+    bottom: 21vh;
+  }
+
+  .section3-image {
+    border: none;
+    height: 75vh;
+    border: 10px outset #000000;
+  }
+
+  #dove-image {
+    /* width: 29vw; */
+    position: absolute;
+    left: 0;
+    right: 2px;
+    margin: 0 auto;
+    bottom: 18vh;
+  }
+
+  .card-header {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .card-collab-container {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .fa-2x {
+    font-size: 2.5rem;
+  }
+
+  #img-card {
+    height: 40vh;
+  }
+
+  #thaison-img {
+    height: auto;
+    width: 50vw;
+  }
+
+  #contain {
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 10vh;
+    border: 20px solid var(--borderGold);
+    overflow-y: hidden;
+  }
+
+  #contain h3 {
+    font-size: 3rem;
+    overflow-y: hidden;
+  }
+
+  .contact-header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .artist {
+    display: none;
+  }
+
+  #email-container p {
+    font-size: 2rem;
+  }
+
+  #contact-container h2 {
+    font-size: 4rem;
+    border-bottom: 2px solid #fff;
+  }
+
+  #contact {
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+
+    margin-left: 2%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+    background-color: #191919;
+  }
+
+  #contact-content {
+    display: flex;
+    /* margin-left: 1%; */
+
+    width: 100%;
+    justify-content: center;
+    /* margin-right: 3%; */
+    /* margin: 2%; */
+    height: 100%;
+    /* background-color: green; */
+    /* margin: 1px solid red; */
+  }
+
+  .contact-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    padding: 0;
+    margin-top: 0;
+    background-color: var(--textGoldColor);
+    overflow: hidden;
+    font-size: 1.3rem;
+    /* font-size: 2rem; */
+  }
+
+  .contact-text h3 {
+    font-size: 2rem;
+  }
+
+  .contact-text h2 {
+    font-size: 3rem;
+    line-height: 11vh;
+  }
+
+  .contact-text h3 {
+    overflow-y: hidden;
+  }
+
+  #contact-img {
+    width: 50%;
+    height: 100%;
+    /* background-image: url(img/tico-contact.png); */
+    /* background-position: top center; */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+  }
+
+  #contact-img img {
+    object-fit: fill;
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .contact-animation-element {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* width: 30%; */
+    /* visibility: hidden; */
+  }
+
+  main {
+    background-color: #191919;
+  }
+
+  #contact img {
+    margin-bottom: 0;
+  }
+
+  #tico-img {
+    display: block;
+  }
+
+  #footer-text p {
+    overflow-y: hidden;
+  }
+
+  #footer-container {
+    height: 100%;
+    /* width: 100%; */
+  }
+
+  #footer {
+    /* padding-top: vh; */
+    height: 30vh;
+    /* padding-top: 2vh; */
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .collab-card {
+    display: flex;
+    /* row-gap: 2vw; */
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    /* margin-left: 5vw; */
+    margin-right: 5vw;
+  }
+
+  .artist-info-text {
+    display: flex;
+    /* justify-content: end; */
+    bottom: 21vh;
+    /* right: %; */
+    /* left: 6%; */
+    justify-content: center;
+    width: 100%;
+    /* height: ; */
+    align-items: center;
+    /* font-size: 1rem; */
+    /* margin-left: 100vw; */
+
+    /* top: 2vh; */
+    /* right: 4vw; */
+    /* left: 0; */
+    /* right: 0; */
+  }
+
+  .artist-info-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .artist-info-text p {
+    font-size: 1rem;
+  }
+
+  .card-collab-container {
+    margin-top: 11vh;
+  }
+
+  #artist-image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 4vh;
+    grid-column-gap: 4vw;
+  }
+}
+
+@media screen and (min-width: 1210px) {
+  .collaboration-etiket {
+    right: 2.5vw;
+  }
+
+  #artist-image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2%;
+  }
+
+  .artist-text-description {
+    width: 32%;
+  }
+
+  @media screen and (min-width: 1280px) {
+    #aphesis-header h6 {
+      font-size: 3rem;
+    }
+
+    #record-title p {
+      font-size: 1.7rem;
+      margin-bottom: 0;
+      text-align: center;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    #aphesis-header h6 {
+      font-size: 3rem;
+    }
+
+    #record-title p {
+      font-size: 1.7rem;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    .contact-text h3 {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    #contact {
+      margin-left: 5%;
+      margin-right: 12%;
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    #aphesis-header h6 {
+      font-size: 3.5rem;
+    }
+
+    #record-title p {
+      font-size: 1.7rem;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    .collaboration-etiket {
+      right: 1vw;
+      bottom: 26vh;
+    }
+
+    .collaboration-etiket h6 {
+      font-size: 2rem;
+      /* left: 10vw; */
+    }
+  }
+}
