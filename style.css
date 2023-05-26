@@ -29,6 +29,10 @@ body {
   color: whitesmoke;
 }
 
+.navbar {
+  z-index: 1;
+}
+
 #a-text-1 {
   color: white;
   font-size: 2rem;
