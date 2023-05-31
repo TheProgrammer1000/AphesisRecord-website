@@ -638,19 +638,10 @@ body {
   display: flex;
   position: absolute;
   flex-direction: column;
-  /* align-items: center; */
   bottom: 21vh;
-  /* top: 2vh; */
-
-  /* left: 200px; */
   right: 0;
-  /*top:50%*/ /*bottom:50%*/ /*top:0*/ /*bottom:0*/ /*bottom:10vh*/ /*height:10vh*/ /*width:47vw*/
   background-color: #32323286;
   color: white;
-  z-index: 1;
-  /* text-align: center; */
-  /* padding-bottom: 100px; */
-  /* overflow-y: hidden; */
 }
 
 .collaboration-etiket p {
@@ -795,6 +786,12 @@ body {
   margin-bottom: 0;
 }
 
+@media screen and (min-width: 390px) and (min-height: 844px) {
+  .collaboration-etiket {
+    bottom: 16vh;
+  }
+}
+
 @media screen and (min-width: 399px) {
   #aphesis-header h6 {
     font-size: 2rem;
@@ -887,6 +884,63 @@ body {
     width: 50vw;
   }
 }
+
+/*IPAD AIR*/
+@media screen and (min-width: 820px) and (min-height: 1180px) {
+  .artist-text-description h5 {
+    font-size: 3.2rem;
+  }
+
+  .artist-text-description p {
+    font-size: 2rem;
+  }
+
+  #collaboration-header h2 {
+    font-size: 3.5rem;
+  }
+
+  #collaboration-header h3 {
+    font-size: 1.7rem;
+    margin-bottom: 3.5vh;
+  }
+
+  #collaboration-paragraph {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .card-text-container p {
+    font-size: 2.4rem;
+  }
+
+  .fa-2x {
+    font-size: 3.5rem;
+  }
+
+  #header-text h8 {
+    font-size: 3.5rem;
+  }
+  #header-text p {
+    font-size: 2rem;
+  }
+
+  .contact-text h2 {
+    font-size: 5rem;
+  }
+
+  .contact-text h3 {
+    font-size: 3rem;
+  }
+
+  .contact-text p {
+    font-size: 2rem;
+  }
+
+  #footer-text p {
+    font-size: 2rem;
+  }
+}
+
 @media screen and (min-width: 830px) {
   #navbar-toggle {
     height: 100%;
